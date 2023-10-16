@@ -1,15 +1,13 @@
 package Entidades;
 
-import java.sql.Date;
-
-import javax.xml.crypto.Data;
+import java.util.Date;
 
 public class contratoPorHora {
 private Date data;
 private double valorporhoras;
 private int horas;
 
-public contratoPorHora(Date data, double valorporhoras, int horas) {
+public contratoPorHora(Date data, Double valorporhoras, Integer horas) {
     this.data = data;
     this.valorporhoras = valorporhoras;
     this.horas = horas;

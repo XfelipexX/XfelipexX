@@ -2,7 +2,6 @@ package Entidades;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import enuns.nivelTrabalhador;
@@ -12,17 +11,29 @@ public class trabalhador {
     private String nome;
     private nivelTrabalhador nivel;
     private Double salarioBase;
+    Departamento departamento;
 
     List<contratoPorHora> contrato = new ArrayList<>();
+    
     
     public trabalhador() {
     }
     
-    public trabalhador(String nome, nivelTrabalhador nivel, Double salarioBase, List<contratoPorHora> contrato) {
+    public trabalhador(String nome, nivelTrabalhador nivel, Double salarioBase, Departamento departamentos, List<contratoPorHora> contrato) {
         this.nome = nome;
         this.nivel = nivel;
         this.salarioBase = salarioBase;
         this.contrato = contrato;
+        this.departamento = departamentos;
+    }
+
+    
+
+    public trabalhador(String nome, nivelTrabalhador nivel, Double salarioBase, Departamento departamento) {
+        this.nome = nome;
+        this.nivel = nivel;
+        this.salarioBase = salarioBase;
+        this.departamento = departamento;
     }
 
     public String getNome() {
@@ -48,7 +59,12 @@ public class trabalhador {
     public void setSalarioBase(Double salarioBase) {
         this.salarioBase = salarioBase;
     }
-
+    public Departamento getDepartamento(){
+        return departamento;
+    }
+    public void setDepartmento(Departamento departmentos) {
+		this.departamento = departmentos;
+	}
     public List<contratoPorHora> getContrato() {
         return contrato;
     }
